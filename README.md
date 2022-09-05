@@ -8,7 +8,6 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 * python3
 * mcpi-e v0.3.2006.2  
 
-此版本mcpi-e spawn無法使用, 故以製作方塊為主設計內容
 
 ## windows環境安裝流程
 1. 安裝minecraft java edition

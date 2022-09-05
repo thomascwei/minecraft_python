@@ -52,7 +52,7 @@ def home():
     # 地板
     mc.setBlocks(x - 3, y - 1, z - 3, x + 3, y - 1, z + 3, block.Block(20))
     # 屋頂
-    mc.setBlocks(x - 3, y + 4, z - 3, x + 3, y + 4, z + 3, block.Block(20))
+    # mc.setBlocks(x - 3, y + 4, z - 3, x + 3, y + 4, z + 3, block.Block(20))
     # 門
     mc.setBlock(x + 3, y, z, block.Block(64))
     mc.setBlock(x + 3, y + 1, z, block.Block(64))
@@ -68,4 +68,5 @@ if __name__ == '__main__':
     # 作業: 製作三個互相連接的方塊
     # practice01()
 
-    mc.spawnEntity(100, 10, 100, entity.CHICKEN)
+    # mc.spawnEntity(100, 10, 100, entity.CHICKEN)
+    home()
