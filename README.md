@@ -14,7 +14,7 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 2. 安裝JDK 17
 3. click `newworld.bat`  
 會自動建一個`BuildTools`資料夾
-4. 進入`newworld.bat`後執行以下命令`java -jar BuildTools.jar --rev 1.19.2`
+4. 進入`BuildTools`後執行以下命令`java -jar BuildTools.jar --rev 1.19.2`
 5. 將`RaspberryJuice.jar`複製到`BuildTools/plugins`文件夾內
 6. 將`StartMineCraftServer.bat`複製到`BuildTools`資料夾內後click即可啟動server, 如下圖
 
