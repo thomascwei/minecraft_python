@@ -21,6 +21,15 @@ def demo01():
         # 把你的程式碼放迴圈裡，用i取代慢慢增加的數字
 
 
+def listen():
+    """
+    監聽遊戲內的chat message
+    """
+    while True:
+        for event in mc.events.pollChatPosts():
+            print(event)
+
+
 def practice01():
     """
     修改前一課製作一個五層高的柱子程式碼，改用迴圈減少你的程式碼
@@ -28,4 +37,5 @@ def practice01():
 
 
 if __name__ == '__main__':
-    demo01()
+    # demo01()
+    practice01()
