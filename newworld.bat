@@ -4,7 +4,7 @@ IF NOT EXIST BuildTools (
     mkdir BuildTools
 )
 cd BuildTools
-curl -z BuildTools.jar -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+curl --insecure  -z BuildTools.jar -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 set /p Input=Enter the version: || set Input=latest
 set /p Java=Java 8 or Java 16 (for 1.17.1 only) or Java 17? || set Java=17
 if %Java%==8 "C:\Program Files\Java\jre1.8.0_333\bin\java" -jar BuildTools.jar --rev %Input%

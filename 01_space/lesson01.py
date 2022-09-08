@@ -16,6 +16,9 @@ def show_current_pos():
 
 
 def demo01():
+    """
+    建一個方塊
+    """
     x, y, z = mc.player.getPos()
     mc.setBlock(x + 4, y, z, block.Block(57))
 
@@ -32,6 +35,9 @@ def practice01():
 
 
 def home():
+    """
+    show time
+    """
     (x, y, z) = mc.player.getPos()
     # 前
     for i in range(6):

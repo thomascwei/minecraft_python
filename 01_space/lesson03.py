@@ -11,30 +11,31 @@ playerName = "thomascwei"  # change to your username
 mc = Minecraft.create(serverAddress, pythonApiPort, playerName)
 
 
-def chicken_rain():
-    """
-    show time
-    """
-    x, y, z = mc.player.getPos()
-    for i in range(100):
-        mc.spawnEntity(x + random.random() * 10, y + 20, z + random.random() * 10, entity.CHICKEN)
-        time.sleep(0.2)
-
-
 def demo01():
     """
-    正上方10格位置生出一隻雞
+    for 迴圈演示
     """
-    x, y, z = mc.player.getPos()
-    mc.spawnEntity(x, y + 10, z, entity.CHICKEN)
+    for i in range(5):
+        print("i=", i)
+        # 先觀察i的變化
+        # 把你的程式碼放迴圈裡，用i取代慢慢增加的數字
+
+
+def listen():
+    """
+    監聽遊戲內的chat message
+    """
+    while True:
+        for event in mc.events.pollChatPosts():
+            print(event)
 
 
 def practice01():
     """
-    製作一個五層高的柱子,在註解下方寫下你的程式碼
+    修改前一課製作一個五層高的柱子程式碼，改用迴圈減少你的程式碼
     """
 
 
 if __name__ == '__main__':
-    demo01()
-    chicken_rain()
+    # demo01()
+    practice01()
