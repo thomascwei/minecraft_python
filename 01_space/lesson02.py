@@ -33,8 +33,29 @@ def practice01():
     """
     製作一個五層高的柱子,在註解下方寫下你的程式碼
     """
+    x, y, z = mc.player.getPos()
+    mc.setBlock(x + 4, y + 1, z - 1, block.Block(79))
+    mc.setBlock(x + 4, y + 2, z - 1, block.Block(79))
+    mc.setBlock(x + 4, y + 3, z - 1, block.Block(79))
+    mc.setBlock(x + 4, y + 4, z - 1, block.Block(79))
+    mc.setBlock(x + 4, y + 5, z - 1, block.Block(79))
+
+
+def last_practice01():
+    """
+    製作五個互相連接的方塊
+    """
+    # 在下方寫下你的程式碼
+    x, y, z = mc.player.getPos()
+    mc.setBlock(x + 4, y, z - 1, block.Block(79))
+    mc.setBlock(x + 4, y, z + 1, block.Block(79))
+    mc.setBlock(x + 4, y, z, block.Block(79))
+    mc.setBlock(x + 4, y, z - 2, block.Block(79))
+    mc.setBlock(x + 4, y, z + 2, block.Block(79))
 
 
 if __name__ == '__main__':
-    demo01()
+    # demo01()
     chicken_rain()
+    # practice01()
+    # last_practice01()
