@@ -12,5 +12,9 @@ if %Java%==16 "C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin\java
 if %Java%==17 "C:\Program Files\Eclipse Adoptium\jdk-17.0.2.8-hotspot\bin\java" -jar BuildTools.jar --rev %Input%
 cls
 if NOT %Java%==8 if NOT %Java%==17 if NOT %Java%==16 echo "Please rerun the .bat file and input 8 or 17 or 16 in java version"
+cd ..
+copy cmd.bat BuildTools
+copy StartMineCraftServer.bat BuildTools
+
 echo "Done!"
 pause
