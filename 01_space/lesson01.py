@@ -60,11 +60,20 @@ def home():
     # 屋頂
     # mc.setBlocks(x - 3, y + 4, z - 3, x + 3, y + 4, z + 3, block.Block(20))
     # 門
-    # mc.setBlock(x + 3, y, z, block.Block(64))
-    # mc.setBlock(x + 3, y + 1, z, block.Block(64))
     mc.setBlocks(x + 3, y, z,
                  x + 3, y + 1, z,
                  block.Block(64))
+    # 精製台
+    mc.setBlock(x + 2, y, z + 1, block.Block(58))
+    # 木材
+    mc.setBlock(x + 2, y + 1, z + 1, block.WOOD)
+    mc.setBlock(x + 2, y + 2, z + 1, block.WOOD)
+    # 石
+    mc.setBlock(x + 2, y, z + 2, block.STONE)
+    mc.setBlock(x + 2, y + 1, z + 2, block.STONE)
+    mc.setBlock(x + 2, y + 2, z + 2, block.STONE)
+    # 牛
+    mc.spawnEntity(x + 1, y, z + 1, entity.COW)
 
 
 if __name__ == '__main__':

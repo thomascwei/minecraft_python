@@ -24,6 +24,8 @@ def listen():
                 lava_pool()
             elif event.message == "3":
                 land_pool()
+            elif event.message == "4":
+                fire_ball()
 
 
 def demo01():
@@ -132,6 +134,15 @@ def land_pool():
     mc.setBlock(x + 4 * dir.x - 1, y - 2, z + 4 * dir.z, block.AIR)
     mc.setBlock(x + 4 * dir.x - 1, y - 2, z + 4 * dir.z + 1, block.AIR)
     mc.setBlock(x + 4 * dir.x - 1, y - 2, z + 4 * dir.z - 1, block.AIR)
+
+
+def fire_ball():
+    """
+    前方火球
+    """
+    x, y, z = mc.player.getPos()
+    dir = mc.player.getDirection()
+    mc.spawnEntity(x + 4 * dir.x, y - 1, z + 4 * dir.z, entity.DRAGON_FIREBALL)
 
 
 if __name__ == '__main__':

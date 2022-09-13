@@ -13,11 +13,12 @@ mc = Minecraft.create(serverAddress, pythonApiPort, playerName)
 
 def demo01():
     """
-    建一個TNT+壓力板
+    建一個TNT+FIRE
     """
     x, y, z = mc.player.getPos()
-    mc.setBlock(x + 4, y - 1, z, block.TNT)
-    mc.setBlock(x + 4, y, z, block.Block(72))
+    dir = mc.player.getDirection()
+    mc.setBlock(x + 4 * dir.x, y - 1, z + 4 * dir.z, block.TNT)
+    mc.setBlock(x + 4 * dir.x, y, z + 4 * dir.z, block.FIRE)
 
 
 def demo02():
@@ -25,22 +26,9 @@ def demo02():
     建一個紅石燈
     """
     x, y, z = mc.player.getPos()
-    mc.setBlock(x + 4, y, z, block.Block(278))
+    dir = mc.player.getDirection()
+    mc.setBlock(x + 2 * dir.x, y, z + 2 * dir.z, block.Block(50))
 
-
-def demo04():
-    """
-    建一個金治台
-    """
-    x, y, z = mc.player.getTilePos()
-    mc.setBlock(x + 1, y, z, block.Block(58))
-
-def demo05():
-    """
-    建木劍
-    """
-    x, y, z = mc.player.getTilePos()
-    mc.getBlock(x + 1, y, z, block.Block(268))
 
 def demo03():
     """
@@ -51,7 +39,14 @@ def demo03():
         mc.removeEntities(i)
 
 
+def demo07():
+    """
+    正前方生出一隻牛
+    """
+    x, y, z = mc.player.getPos()
+    dir = mc.player.getDirection()
+    mc.spawnEntity(x + 1 * dir.x, y, z + 1 * dir.z, entity.COW)
+
+
 if __name__ == '__main__':
-    demo03()
-    # demo04()
-    demo05()
+    demo01()
