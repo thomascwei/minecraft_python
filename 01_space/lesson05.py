@@ -45,8 +45,19 @@ def demo07():
     """
     x, y, z = mc.player.getPos()
     dir = mc.player.getDirection()
-    mc.spawnEntity(x + 1 * dir.x, y, z + 1 * dir.z, entity.COW)
+    # mc.spawnEntity(x + 2 * dir.x, y, z + 2 * dir.z, entity.COW)
+    mc.setBlock(x + 1 * dir.x, y, z + 1 * dir.z, block.Block(62))
+
+    # mc.setBlock(x + 1 * dir.x, y, z + 1 * dir.z, block.WOOD)
+    mc.setBlock(x + 1 * dir.x, y + 1, z + 1 * dir.z, block.IRON_BLOCK)
 
 
 if __name__ == '__main__':
-    demo01()
+    # demo02()
+    x, y, z = mc.player.getPos()
+    # mc.setBlock(x + 1 * dirr.x, y + 1, z + 1 * dirr.z, block.DIAMOND_BLOCK)
+    mc.setBlocks(x - 2, y - 2, z - 2,
+                 x - 2, y + 2, z + 2,
+                 block.Block(46))
+
+    mc.setBlock(x - 2, y + 1, z, block.Block(91))

@@ -10,10 +10,16 @@ playerName = "thomascwei"  # change to your username
 
 mc = Minecraft.create(serverAddress, pythonApiPort, playerName)
 
+home_x = -330
+home_y = -29
+home_z = -451
+global target_x, target_y, target_z
+
 
 def listen():
     """
-    監聽遊戲內的chat message
+    IF ELSE 練習
+    監聽遊戲內的chat message, 像在施魔法前的詠唱
     """
     while True:
         for event in mc.events.pollChatPosts():
@@ -26,6 +32,12 @@ def listen():
                 land_pool()
             elif event.message == "4":
                 fire_ball()
+            elif event.message == "shelter":
+                shelter()
+            elif event.message == "back home":
+                back_home()
+            elif event.message == "go out":
+                go_out()
 
 
 def demo01():
@@ -50,7 +62,7 @@ def demo02():
 
 def practice01():
     """
-    用迴圈修改front_fire, 要用到兩層迴圈喔
+    用到兩層迴圈做出一面牆
     """
 
 
@@ -136,6 +148,36 @@ def land_pool():
     mc.setBlock(x + 4 * dir.x - 1, y - 2, z + 4 * dir.z - 1, block.AIR)
 
 
+def shelter():
+    """
+    show time
+    """
+    (x, y, z) = mc.player.getPos()
+    # 前
+    for i in range(6):
+        for j in range(3):
+            mc.setBlock(x - 3 + i, y + j, z + 3, block.Block(20))
+    # 後
+    for i in range(6):
+        for j in range(3):
+            mc.setBlock(x - 3 + i, y + j, z - 3, block.Block(20))
+    # 左
+    for i in range(6):
+        for j in range(3):
+            mc.setBlock(x - 3, y + j, z - 3 + i, block.Block(20))
+    # 右
+    for i in range(6):
+        for j in range(3):
+            mc.setBlock(x + 3, y + j, z - 3 + i, block.Block(20))
+
+    # 牛
+    mc.spawnEntity(x + 1, y, z + 1, entity.COW)
+    mc.spawnEntity(x + 1, y, z + 1, entity.COW)
+    mc.spawnEntity(x + 1, y, z + 1, entity.COW)
+    # 火把
+    mc.setBlock(x - 2, y + 2, z, block.Block(50))
+
+
 def fire_ball():
     """
     前方火球
@@ -145,7 +187,21 @@ def fire_ball():
     mc.spawnEntity(x + 4 * dir.x, y - 1, z + 4 * dir.z, entity.DRAGON_FIREBALL)
 
 
+def back_home():
+    current_pos = mc.player.getTilePos()
+    global target_x, target_y, target_z
+    target_x, target_y, target_z = current_pos.x, current_pos.y, current_pos.z
+    mc.player.setPos(home_x, home_y, home_z)
+
+
+def go_out():
+    global target_x, target_y, target_z
+    mc.player.setPos(target_x, target_y, target_z)
+
+
 if __name__ == '__main__':
     # demo01()
     # front_fire()
     listen()
+    # back_home()
+    # go_out()

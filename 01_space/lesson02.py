@@ -33,7 +33,8 @@ def practice01():
     """
     製作一個五層高的柱子,在註解下方寫下你的程式碼
     """
-    x, y, z = mc.player.getPos()
+    # 得到目前所在位置的X,Y,Z
+    x, y, z = mc.player.getTilePos()
     mc.setBlock(x + 4, y + 1, z - 1, block.Block(79))
     mc.setBlock(x + 4, y + 2, z - 1, block.Block(79))
     mc.setBlock(x + 4, y + 3, z - 1, block.Block(79))
