@@ -19,7 +19,7 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 ## 直接使用spigot-1.19.2.jar
 1. 複製`spigot-1.19.2.jar`,`StartMineCraftServer.bat`到新資料夾中
 2. click`StartMineCraftServer.bat`,第一次啟動時會失敗,依照錯誤信息將`eula.txt`裡改為true
-3. 將`RaspberryJuice.jar`複製到`./plugins`文件夾內
+3. 將`RaspberryJuice.jar`複製到`plugins`文件夾內
 4. 再次click`StartMineCraftServer.bat`, 看到以下畫面代表成功
 ![spigot server](./assets/spigot.PNG)
 ## minecraft連線server
@@ -41,6 +41,6 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 ![spigot server](./assets/vm.PNG)
 7. 將`Minecraft_player_name`改成你的名字
 8. 開始設計程式積木, 完成後按紅色箭頭, 畫面會提示成功
-9. 在遊戲中的談會視窗輸入`vm 程式名稱`, 便會啟用
+9. 在遊戲中的談話視窗輸入`vm 程式名稱`, 便會啟用
 ## reference
 [minecraft id list](https://minecraft-ids.grahamedgecombe.com/)
