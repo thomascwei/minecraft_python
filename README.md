@@ -30,5 +30,17 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 ![spigot server](./assets/join.png)
 
 
+## 程式積木模式
+1. 複製`spigot-1.19.2.jar`,`StartMineCraftServer.bat`到新資料夾中
+2. 建資料夾`plugins`, 將`visualmodder-1.19-20220930_1222_obf.jar`複製進去
+3. click`StartMineCraftServer.bat`,第一次啟動時會失敗,依照錯誤信息將`eula.txt`裡改為true
+4. 再次click`StartMineCraftServer.bat`, 看到以下畫面代表成功
+![spigot server](./assets/spigot.PNG)
+5. 用上面介紹過的方式進入遊戲
+6. 打開瀏覽器, 訪問`http://localhost:10273/editor/minecraft/index.html`, 可以見到以下畫面.
+![spigot server](./assets/vm.PNG)
+7. 將`Minecraft_player_name`改成你的名字
+8. 開始設計程式積木, 完成後按紅色箭頭, 畫面會提示成功
+9. 在遊戲中的談會視窗輸入`vm 程式名稱`, 便會啟用
 ## reference
 [minecraft id list](https://minecraft-ids.grahamedgecombe.com/)
