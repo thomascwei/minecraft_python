@@ -41,6 +41,8 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 ![spigot server](./assets/vm.PNG)
 7. 將`Minecraft_player_name`改成你的名字
 8. 開始設計程式積木, 完成後按紅色箭頭, 畫面會提示成功
-9. 在遊戲中的談話視窗輸入`vm 程式名稱`, 便會啟用
+9. 在遊戲中的談話視窗輸入`/vm 程式名稱`, 便會啟用  
+![](./assets/brick.png)
+
 ## reference
 [minecraft id list](https://minecraft-ids.grahamedgecombe.com/)
