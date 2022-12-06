@@ -16,22 +16,34 @@ def demo01():
     for 迴圈演示
     """
     for i in range(5):
-        print("i=", i)
+        # 猜猜會印出幾次
+        mc.postToChat("哈囉")
         # 先觀察i的變化
+        mc.postToChat(i)
         # 把你的程式碼放迴圈裡，用i取代慢慢增加的數字
 
 
 def practice01():
     """
-    清除怪物
-    迴圈內的i要怎樣從不是0的地方開始,清除50~69的怪物
+    修改前一課製作柱子程式碼，改用迴圈減少你的程式碼
     """
+    x, y, z = mc.player.getTilePos()
+    for i in range(1000):
+        # 生成一個方塊
+        mc.setBlock(x + 4, y + i, z - 1, block.Block(11))
+        # 將i印出在聊天視窗
+        # mc.postToChat(i)
+
 
 def practice02():
     """
-    修改前一課製作一個五層高的柱子程式碼，改用迴圈減少你的程式碼
+    通天塔
     """
+    # 在下方寫下你的程式碼
+    x, y, z = mc.player.getPos()
+    for i in range(300):
+        mc.setBlock(x + i, y + 1, z + 1, block.Block(79))
 
 
 if __name__ == '__main__':
-    demo01()
+    practice02()
