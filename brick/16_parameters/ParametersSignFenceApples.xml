@@ -1,0 +1,87 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=":Ylq|-@lX=2b!57y.K8/">size</variable>
+    <variable id="eMdBjNTzKaiTlKZR6ZHX">numberofapples</variable>
+    <variable id="c__~p]=lr+V0T,`~DF][">mytext</variable>
+  </variables>
+  <block type="procedures_defnoreturn" id="j=7v!qp,+S`uG9Yt-hU]" x="-429" y="-310">
+    <mutation>
+      <arg name="size" varid=":Ylq|-@lX=2b!57y.K8/"></arg>
+    </mutation>
+    <field name="NAME">fence</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="minecraft_rectangle" id="FBq8CY2FAq~*Mj*ynlzL">
+        <field name="fill">false</field>
+        <value name="width">
+          <shadow type="math_number" id="8.!lEzHcxj]DlUe0UoWO">
+            <field name="NUM">4</field>
+          </shadow>
+          <block type="variables_get" id="~2EzBb]Q$WS)x48g_rAr">
+            <field name="VAR" id=":Ylq|-@lX=2b!57y.K8/">size</field>
+          </block>
+        </value>
+        <value name="height">
+          <shadow type="math_number" id="1NA/dh7Y-Rw%eSBWW^5K">
+            <field name="NUM">4</field>
+          </shadow>
+          <block type="variables_get" id="neYJ=H@eriD:8DLU;.{N">
+            <field name="VAR" id=":Ylq|-@lX=2b!57y.K8/">size</field>
+          </block>
+        </value>
+        <value name="NAME">
+          <shadow type="minecraft_materialbockOnlyOne" id="+aOfW@=nYhgc}!g]CdE%">
+            <field name="NAME">b.acacia_fence</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Wt0VFa?SZL=2y8=h0QRH" x="-427" y="-211">
+    <mutation>
+      <arg name="numberofapples" varid="eMdBjNTzKaiTlKZR6ZHX"></arg>
+    </mutation>
+    <field name="NAME">apples</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_repeat_ext" id="Q#P3[(sQ7r67S*=u9=%7">
+        <value name="TIMES">
+          <shadow type="math_number" id="z!k|RQ5tN/b#JoLNX#@*">
+            <field name="NUM">10</field>
+          </shadow>
+          <block type="variables_get" id="l-E$lE1U;Jl4ks]R^7gO">
+            <field name="VAR" id="eMdBjNTzKaiTlKZR6ZHX">numberofapples</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="minecraft_givetoplayer" id="6JN%`_,jDDCK:*RLds^w">
+            <value name="NAME">
+              <shadow type="minecraft_item" id="8jG1K!kzsSmJy,.QG)YU">
+                <field name="NAME">i.apple</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="$0XNq|gK[8W_31N$i$d*" x="-426" y="-56">
+    <mutation>
+      <arg name="mytext" varid="c__~p]=lr+V0T,`~DF]["></arg>
+    </mutation>
+    <field name="NAME">sign</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="minecraft_block" id="7.$vRBHxQ:-+krxBs318">
+        <value name="NAME">
+          <shadow type="minecraft_materialbockOnlyOne" id="yAu|ss_sp3v}/d/lWPJQ">
+            <field name="NAME">b.grass_block</field>
+          </shadow>
+          <block type="minecraft_sign" id="+,okk?4OX|z]a2I-c%T/">
+            <field name="varName" id="c__~p]=lr+V0T,`~DF][">mytext</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
