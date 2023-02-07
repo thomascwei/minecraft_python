@@ -7,3 +7,6 @@
    如果value等於2材質設為`Block of Quartz`  
    如果value等於3材質設為`Block of Raw Gold`
 3. 如果value等於1而且我手裡拿著(`I'm holding a`)鑽石劍(`Diamond Sword`)，產生一個`zombie`
+
+## 進階版
+* 每一層的材質各自獨立隨機決定

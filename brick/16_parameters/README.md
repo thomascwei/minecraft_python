@@ -15,4 +15,9 @@ vmu fence 30
 
 ![img.png](img.png)
 
+## 動態數字顯示
+讓顯示的數字從1->10每隔一秒切換  
+會用到`Time`模組裏的`after`喔，先試試`after`怎使用。
+![](time_clock.png)
+
 > 先思考嘗試做看看，想不到再看提示

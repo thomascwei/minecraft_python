@@ -49,6 +49,11 @@ _當前minecraft windows版本為1.19.2, 此版本目前無法使用`code connec
 9. 在遊戲中的談話視窗輸入`/vm 程式名稱`, 便會啟用  
    ![](./assets/brick.png)
 
+### 使用官方server
+如不自建server也可使用官方的，在遊戲中選`Multiplayer`->`Add Server`，填入下圖內容，`Server Name`可任意填。
+![](assets/offical_site.png)
+瀏覽器訪問此[server editor](http://gnnbgpr2.thunderhosting.cloud:5001/editor/minecraft/index.html?lang=en)，操作方式與自建server
+相同。
 ## reference
 
 [minecraft id list](https://minecraft-ids.grahamedgecombe.com/)
