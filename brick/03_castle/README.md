@@ -2,10 +2,9 @@
 
 ![](./castle.png)
 
-## 老師講解
-- 牆材質`Block of Iron` `Block of Quartz`
+> 牆材質`Block of Iron` `Block of Quartz`
 
-### 嘗試讓學生觀察後指出製作的重點
+## 嘗試讓學生觀察後指出製作的重點
 
 1. 最外圈護城河
 2. 外圈低牆(高度6)
